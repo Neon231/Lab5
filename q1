@@ -1,0 +1,22 @@
+def create_list():
+    # Task 1: Creating a list in Python
+    list1 = [1, 2, 3, 4, 5]
+    list2 = ['a', 'b', 'c', 'd', 'e']
+
+    return list1, list2
+
+def concatenate_lists_indexwise(list1, list2):
+    # Task 2: Concatenate two lists index-wise
+    concatenated_list = [str(list1[i]) + list2[i] for i in range(min(len(list1), len(list2)))]
+
+    return concatenated_list
+
+if __name__ == "__main__":
+    # Task 1: Creating a list in Python
+    list1, list2 = create_list()
+    print("List 1:", list1)
+    print("List 2:", list2)
+
+    # Task 2: Concatenate two lists index-wise
+    result_list = concatenate_lists_indexwise(list1, list2)
+    print("Concatenated List Index-wise:", result_list)
