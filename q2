@@ -1,0 +1,24 @@
+  def square_items(input_list):
+    # Task 1: Turn every item of a list into its square
+    squared_list = [item**2 for item in input_list]
+    return squared_list
+
+def concatenate_lists_alternate_order(list1, list2):
+    # Task 2: Concatenate two lists in the following order
+    concatenated_list = [list1[i] if i % 2 == 0 else list2[i] for i in range(max(len(list1), len(list2)))]
+    return concatenated_list
+
+if __name__ == "__main__":
+    # Task 1: Turn every item of a list into its square
+    original_list = [2, 4, 6, 8, 10]
+    squared_result = square_items(original_list)
+    print("Original List:", original_list)
+    print("Squared List:", squared_result)
+
+    # Task 2: Concatenate two lists in the following order
+    list1 = ['a', 'b', 'c']
+    list2 = [1, 2, 3, 4, 5]
+    concatenated_result = concatenate_lists_alternate_order(list1, list2)
+    print("List 1:", list1)
+    print("List 2:", list2)
+    print("Concatenated List Alternate Order:", concatenated_result)
