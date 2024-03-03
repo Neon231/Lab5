@@ -1,0 +1,26 @@
+class VehicleWithAttributes:
+    def __init__(self, max_speed, mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+# Creating an instance of VehicleWithAttributes
+vehicle_instance = VehicleWithAttributes(max_speed=120, mileage=25)
+
+print("Vehicle with attributes:")
+print("Max Speed:", vehicle_instance.max_speed)
+print("Mileage:", vehicle_instance.mileage)
+print()
+
+class VehicleWithoutAttributes:
+    pass
+
+# Creating an instance of VehicleWithoutAttributes
+vehicle_without_attributes_instance = VehicleWithoutAttributes()
+
+print("Vehicle without attributes:")
+# You can add attributes dynamically
+vehicle_without_attributes_instance.max_speed = 100
+vehicle_without_attributes_instance.mileage = 20
+
+print("Max Speed:", vehicle_without_attributes_instance.max_speed)
+print("Mileage:", vehicle_without_attributes_instance.mileage)
