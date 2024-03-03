@@ -1,0 +1,24 @@
+class Vehicle:
+    def __init__(self, max_speed, mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    def __init__(self, max_speed, mileage, capacity=50):
+        # Call the constructor of the parent class (Vehicle)
+        super().__init__(max_speed, mileage)
+        self.capacity = capacity
+
+    def seating_capacity(self):
+        print(f"The seating capacity of the bus is {self.capacity} passengers.")
+
+# Creating an instance of the Bus class
+bus_instance = Bus(max_speed=80, mileage=15)
+
+# Accessing attributes from the Vehicle class
+print("Bus attributes inherited from Vehicle:")
+print("Max Speed:", bus_instance.max_speed)
+print("Mileage:", bus_instance.mileage)
+
+# Accessing attributes specific to the Bus class
+bus_instance.seating_capacity()
