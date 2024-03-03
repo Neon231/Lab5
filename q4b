@@ -1,0 +1,24 @@
+class Vehicle:
+    def __init__(self, max_speed, mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    def __init__(self, max_speed, mileage, capacity=50):
+        super().__init__(max_speed, mileage)
+        self.capacity = capacity
+
+    def seating_capacity(self):
+        print(f"The seating capacity of the bus is {self.capacity} passengers.")
+
+# Create instances of Bus and Vehicle classes
+bus_instance = Bus(max_speed=80, mileage=15)
+school_bus_instance = Bus(max_speed=60, mileage=20, capacity=30)
+
+# Task 1: Check type of an object
+bus_instance_type = type(bus_instance).__name__
+print(f"The Bus object belongs to the class: {bus_instance_type}")
+
+# Task 2: Determine if School_bus is also an instance of the Vehicle class
+is_instance_of_vehicle = isinstance(school_bus_instance, Vehicle)
+print(f"Is School_bus an instance of Vehicle class? {is_instance_of_vehicle}")
